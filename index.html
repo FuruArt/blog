@@ -1,0 +1,59 @@
+---
+layout: default
+---
+
+<div class="posts">
+
+  <div class="row">
+
+  <ul class="post-list">
+  {% for post in paginator.posts %}
+      <li class="article">
+        <div class="article-body">
+            <div style="background-image: url('{{ post.image }}')" class="headerImage">
+
+            <h2 class="article-title">
+            
+              <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+
+            </h2>
+          </div>
+          <div class="article-info">
+            <span class="info-date" title="Data"><i class="ion-ios-calendar"></i> {% include customDate.html %} </span>
+            <span class="info-cat" title="Kategoria"><i class="ion-ios-photos"></i><a href="/search/category/"> {{ post.category }} </a></span>
+            <span class="info-author" title="Autor"><i class="ion-ios-contact"></i> {{ site.author }} </span>
+          </div>
+
+          <div class="article-content">
+          
+            {{ post.excerpt }}
+
+          </div>
+
+          <div class="readmore"><a href="{{ post.url }}">Czytaj dalej <i class="ion-android-arrow-forward"></i></a></div>
+          
+        </div>
+      </li>
+  {% endfor %}
+  </ul>
+
+    <div class="pagination">
+    {% if paginator.previous_page %}
+    <div class="previousButton">
+      <a href="{{ paginator.previous_page_path }}" class="previous"><i class="ion-android-arrow-back"></i> Nowsze artykuły</a>
+    </div>
+    {% else %}
+      <span class="previous"></span>
+    {% endif %}
+    {% if paginator.next_page %}
+    <div class="nextButton">
+      <a href="{{ paginator.next_page_path }}" class="next">Wcześniejsze artykuły <i class="ion-android-arrow-forward"></i></a>
+    </div>
+    {% else %}
+      <span class="next"></span>
+    {% endif %}
+    </div>
+
+  </div>
+
+</div>
