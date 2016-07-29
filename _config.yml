@@ -13,9 +13,9 @@ lang: PL
 # Mail to contact
 email: grafikawpelni@gmail.com
 # Base url of page
-baseurl: ""
+baseurl: /blog/
 # Url of page
-url: ""
+url: furuart.github.io/blog/
 # Home Url of page
 homeurl: /
 # Scripts url 
