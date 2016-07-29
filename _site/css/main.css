@@ -661,6 +661,7 @@ header nav {
     border: 2px solid rgba(55, 55, 55, 0.1);
     padding: 15px;
     text-align: center; }
+  .article .article-content ul { padding: 0 20px; }
   .article .article-content p {
     margin: 20px auto; }
   .article .article-content a, .article .article-content a:visited {
