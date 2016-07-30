@@ -4,7 +4,7 @@ description: Wszystkie artykuły przedstawione na osi czasu.
 url: /archive
 layout: default
 ---
-<div class="row">
+<!-- <div class="row">
   <div id="archive">
     <header>
       <h3><i class="ion-android-alarm-clock"></i> {{ page.title }}</h3>
@@ -32,4 +32,22 @@ layout: default
     {% endfor %}
     </ul>
   </div>
+</div> -->
+<div class="post">
+	<h2>Archive</h2>
+	<ul>
+	  {% for post in site.posts %}
+	    {% unless post.next %}
+	      <h3>{{ post.date | date: '%Y %b' }}</h3>
+	    {% else %}
+	      {% capture year %}{{ post.date | date: '%Y %b' }}{% endcapture %}
+	      {% capture nyear %}{{ post.next.date | date: '%Y %b' }}{% endcapture %}
+	      {% if year != nyear %}
+	        <h3>{{ post.date | date: '%Y %b' }}</h3>
+	      {% endif %}
+	    {% endunless %}
+
+	    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+	  {% endfor %}
+	</ul>
 </div>
