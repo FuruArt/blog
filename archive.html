@@ -11,6 +11,7 @@ layout: default
       <p class="desc">{{ page.description }}</p>
     </header>
   </div>
+  
   <div id="archive">
     {%for post in site.posts %}
       {% unless post.next %}
@@ -21,11 +22,14 @@ layout: default
           {% capture year %}{{ post.date | date: '%B' }}{% endcapture %}
           {% capture nyear %}{{ post.next.date | date: '%B' }}{% endcapture %}
           {% if year != nyear %}</ul>
+  </div>
+  <div class="archive">
           <h3>{{ month }}</h3>
-          <ul class="past"></ul>
+          <ul class="past">
           {% endif %}
       {% endunless %}
         <li><time>{% include customDate.html %} <i class="ion-android-arrow-forward"></i></time><a href="{{ site.github.url }}/{{ post.url }}">{{ post.title }}</a></li></time>
     {% endfor %}
+        </ul>
   </div>
 </div>
