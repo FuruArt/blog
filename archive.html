@@ -23,9 +23,9 @@ layout: default
           {% capture nyear %}{{ post.next.date | date: '%B' }}{% endcapture %}
           {% if year != nyear %}
           </ul>
-          <h3>{{ post.date | date: '%B' }}</h3>
+          <h3 class="month">{{ month }}</h3>
           <ul class="past">
-        {% endif %}
+          {% endif %}
       {% endunless %}
         <li><time>{% include customDate.html %} <i class="ion-android-arrow-forward"></i></time><a href="{{ site.github.url }}/{{ post.url }}">{{ post.title }}</a></li></time>
 
