@@ -22,14 +22,15 @@ layout: default
           {% capture year %}{{ post.date | date: '%B' }}{% endcapture %}
           {% capture nyear %}{{ post.next.date | date: '%B' }}{% endcapture %}
           {% if year != nyear %}
+        </ul>
   </div>
   <div id="archive">
           <h3>{{ month }}</h3>
           <ul class="this">
           {% endif %}
       {% endunless %}
-        <li><time>{% include customDate.html %} <i class="ion-android-arrow-forward"></i></time><a href="{{ site.github.url }}/{{ post.url }}">{{ post.title }}</a></li></time>
-    </ul>
+        <li><time>{% include customDate.html %} <i class="ion-android-arrow-forward"></i></time><a href="{{ post.url }}">{{ post.title }}</a></li></time>
     {% endfor %}
+    </ul>
   </div>
 </div>
