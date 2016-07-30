@@ -21,9 +21,10 @@ layout: default
         {% else %}
           {% capture year %}{{ post.date | date: '%B' }}{% endcapture %}
           {% capture nyear %}{{ post.next.date | date: '%B' }}{% endcapture %}
-          {% if year != nyear %}</ul>
+          {% if year != nyear %}
+          </ul>
   </div>
-  <div class="archive">
+  <div id="archive">
           <h3>{{ month }}</h3>
           <ul class="this">
           {% endif %}
