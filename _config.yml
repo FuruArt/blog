@@ -37,7 +37,7 @@ bodyclass: body-custom
 
 # Build settings
 markdown: kramdown
-highlighter: pygments
+highlighter: rouge
 # Permalink
 permalink: :title/
 # Excerpt
