@@ -13,9 +13,9 @@ layout: default
   </div>
   
   <div id="archive">
-  {% assign month = post.date | date: '%B %Y' | replace:"January","Styczeń" | replace:"Februar","Luty" | replace:"March","Marzec" | replace: "April", "Kwiecień" | replace:"May","Maj" | replace:"June","Czerwiec" | replace:"July","Lipiec" | replace: "August","Sierpień" | replace: "September", "Wrześień" | replace "October", "Październik" | replace: "November", "Listopad" | replace:"December","Grudzień" %}
     	{%for post in site.posts %}
       	{% unless post.next %}
+      	{% assign month = post.date | date: '%B %Y' | replace:"January","Styczeń" | replace:"Februar","Luty" | replace:"March","Marzec" | replace: "April", "Kwiecień" | replace:"May","Maj" | replace:"June","Czerwiec" | replace:"July","Lipiec" | replace: "August","Sierpień" | replace: "September", "Wrześień" | replace "October", "Październik" | replace: "November", "Listopad" | replace:"December","Grudzień" %}
       	<h3 class="month">{{ month }}</h3>
   	    <ul class="this">
         {% else %}
