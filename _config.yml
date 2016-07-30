@@ -52,3 +52,5 @@ paginate: 6
 paginate_path: "/strona-:num"
 
 timezone: null
+
+repository: FuruArt/blog
