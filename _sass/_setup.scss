@@ -832,6 +832,7 @@ footer {
     background: #fff;
     
     a {
+        font-weight: 600;
         color: $primary-violet;
         @include transition(all, .4s, ease-in-out);
         
