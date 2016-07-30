@@ -27,7 +27,7 @@ layout: default
           <ul class="past">
         {% endif %}
       {% endunless %}
-        <li><time>{% include customDate.html %} <i class="ion-android-arrow-forward"></i></time><a href="{{ post.url }}">{{ post.title }}</a></li></time>
+        <li><time>{% include customDate.html %} <i class="ion-android-arrow-forward"></i></time><a href="{{ site.github.url }}/{{ post.url }}">{{ post.title }}</a></li></time>
 
     {% endfor %}
     </ul>
